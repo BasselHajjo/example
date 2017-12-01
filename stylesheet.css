@@ -1,0 +1,106 @@
+*{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.ex1{
+    margin: 0 0 80px 0;
+}
+
+.ex2{
+    margin: 0 0 80px 0;
+}
+
+.ex3{
+    margin: 0 0 80px 0;
+}
+
+.ex4{
+    margin: 0 0 80px 0;
+}
+
+/*
+example 1
+if you want to change the color of the first item without efecting the rest of the list , we use the first-child selector like this
+notes that we can add a class in html to the first item and select it by it's own class , but we will do it now this way..
+*/
+
+li:first-child{
+    color: red;
+    font-size: 40px;
+}
+
+/* you can also select the first item or any item by calling it's number */
+
+li:nth-child(1){
+    text-decoration: underline
+}
+
+li:nth-child(3){
+    color:blue;
+}
+
+/* if you want to select the odd items or the even  */
+
+p:nth-child(odd) {
+    background: red;
+}
+
+p:nth-child(even) {
+    background: blue;
+}
+
+/* let's say you want to select every third element*/
+
+
+h1:nth-child(3n){
+    background-color: yellow;
+}
+
+/* let's say you want to select the first 5 elements or the last 5*/
+
+h2:nth-child(-n+5){
+    background-color: aqua;
+}
+
+h2:nth-child(n+6):nth-child(-n+8){
+   background-color: brown
+}
+
+h2:nth-child(n+9){
+    background-color: magenta;
+}
+
+
+/* now let's talk about calc */
+/* we have 2 pictures here , and we want to floaut them to the left , each pic has a margen , and we want our website responsive , if you choose to put the width to 700px for example , it could work in your browser , but on a mobile device it will over flow out side the page !
+so you can use a percentage width (50%), but remember the pic had a margen by px , so it will not work as you wish ! so we use calc like this :
+*/
+
+.ex5 .img:first-child{
+    margin: 0 10px 80px 20px;
+}
+
+img:nth-child(2){
+    margin: 0 20px 80px 10px;
+}
+
+.img{
+    float: left;
+    width: calc(50% - 30px)
+}
+
+
+
+
+
